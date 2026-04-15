@@ -53,7 +53,7 @@ export const GameProvider = ({ children }) => {
   background: theme === 'light' ? '#F3F4F6' : '#111827',
   card: theme === 'light' ? '#FFFFFF' : '#1F2937',
   text: theme === 'light' ? '#111827' : '#F9FAFB',
-  primary: '#8b5cf6', // Гарний фіолетовий замість помаранчевого
+  primary: '#8b5cf6', 
 };
 
   return (

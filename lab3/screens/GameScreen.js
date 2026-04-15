@@ -9,7 +9,6 @@ export default function GameScreen() {
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
-      {/* 1. ФІКСОВАНА ВЕРХНЯ ЧАСТИНА (ЖОДНОГО СКРОЛУ ТУТ) */}
       <View style={styles.fixedArea}>
         <View style={styles.header}>
           <Text style={[styles.label, { color: colors.text }]}>SCORE</Text>
@@ -21,7 +20,6 @@ export default function GameScreen() {
         </View>
       </View>
 
-      {/* 2. СКРОЛ ТІЛЬКИ ДЛЯ КАРТКИ ЗНИЗУ */}
       <View style={styles.scrollArea}>
         <ScrollView 
           showsVerticalScrollIndicator={false}
@@ -37,13 +35,13 @@ export default function GameScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1 },
   fixedArea: {
-    height: '65%', // Більша частина екрана під гру
+    height: '65%', 
     justifyContent: 'center',
     alignItems: 'center',
     paddingTop: 50,
   },
   scrollArea: {
-    flex: 1, // Залишок місця під картку
+    flex: 1, 
   },
   header: { alignItems: 'center', marginBottom: 20 },
   label: { fontSize: 14, letterSpacing: 4, opacity: 0.5, fontWeight: 'bold' },

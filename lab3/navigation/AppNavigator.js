@@ -10,21 +10,19 @@ import SettingsScreen from '../screens/SettingsScreen';
 const Tab = createBottomTabNavigator();
 
 export default function AppNavigator() {
-  const { colors, theme } = useGame(); // Беремо кольори та назву теми
+  const { colors, theme } = useGame(); 
 
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
-        // Стилізація хедера (верхня панель)
         headerStyle: {
           backgroundColor: colors.card,
-          elevation: 0, // прибираємо тінь на Android
-          shadowOpacity: 0, // прибираємо тінь на iOS
+          elevation: 0, 
+          shadowOpacity: 0, 
         },
         headerTintColor: colors.text,
         headerTitleStyle: { fontWeight: 'bold' },
 
-        // Стилізація футера (нижня панель навігації)
         tabBarStyle: {
           backgroundColor: colors.card,
           borderTopWidth: 0,
@@ -32,7 +30,7 @@ export default function AppNavigator() {
           paddingBottom: 10,
           paddingTop: 10,
         },
-     tabBarActiveTintColor: '#8b5cf6', // Фіолетовий активний колір
+     tabBarActiveTintColor: '#8b5cf6', 
     tabBarInactiveTintColor: theme === 'light' ? '#9ca3af' : '#4b5563',
         
         // Додаємо привабливі іконки
